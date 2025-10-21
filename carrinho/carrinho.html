@@ -1,0 +1,19 @@
+@for (p of produto; track p.id) {
+<div>
+   <h2>Produtos</h2>
+   <h4>{{ p.nome }}</h4>
+   <small>
+      Valor: R${{ p.preco }} <br>
+      Em estoque: {{ p.estoque }}
+   </small><br>
+   <button (click)="adicionarAoCarrinho(p)">Adicionar ao Carrinho</button>
+</div>
+}
+
+<h2>Carrinho</h2>
+<ul>
+   @for (c of carrinho; track c.id) {
+   <p>{{ c.nome }} - {{ c. preco}}</p>
+   }
+</ul>
+<h3>Valor total: {{ valorCarrinho }}</h3>

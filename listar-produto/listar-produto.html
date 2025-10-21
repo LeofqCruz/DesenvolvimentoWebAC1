@@ -1,0 +1,9 @@
+<h2>Lista de Produtos</h2>
+<ul>
+   @for (produto of produtos; track produto.nome) {
+   <li>
+      {{ produto.nome }} - {{ produto.tipo }} - R$ {{ produto.preco }}
+      <button (click)="remover(produtos.indexOf(produto))">Remover</button>
+   </li>
+   }
+</ul>

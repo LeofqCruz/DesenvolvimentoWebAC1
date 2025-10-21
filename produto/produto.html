@@ -1,0 +1,18 @@
+<h2>Cadastrar Produto</h2>
+<form (ngSubmit)="salvar()">
+   <label>Nome:</label>
+   <input [(ngModel)]="produto.nome" name="nome" required />
+
+   <label>Tipo:</label>
+   <input [(ngModel)]="produto.tipo" name="tipo" required />
+
+   <label>Preço:</label>
+   <input [(ngModel)]="produto.preco" name="preco" type="number" required />
+
+   <button type="submit">Salvar</button>
+</form>
+
+@if (produto.nome !== '' && produto.tipo !== '' && produto.preco > 0) {
+<p>Produto pronto para ser salvo: {{ produto.nome }} - {{ produto.tipo }} - R$
+   {{ produto.preco }}</p>
+}

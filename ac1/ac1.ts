@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
-type Content = { titulo: string, autor: string, dataPublicacao: string, conteudo: string, numeroCurtidas: number,novoComentario: string, listaComentarios: string[] }
+type Content = { titulo: string, autor: string, dataPublicacao: string, conteudo: string,
+   numeroCurtidas: number,novoComentario: string, listaComentarios: string[] }
 
 @Component({
    selector: 'app-ac1',
@@ -14,9 +15,12 @@ export class AC1 {
    listaComentarios: string[] = []
    numeroCurtidas:number = 0;
    conteudos: Content[] = [
-      { titulo: 'Sem Anistia', autor: 'Carmen Lúcia', dataPublicacao: '11/09/2025', conteudo: 'preso', numeroCurtidas: 0, novoComentario: '', listaComentarios: [] },
-      { titulo: 'Taokey', autor: 'Pocketnaro', dataPublicacao: '11/09/2025', conteudo: 'preso', numeroCurtidas: 0, novoComentario: '', listaComentarios: [] },
-      { titulo: 'Vai Xandão', autor: 'Manoel Jones', dataPublicacao: '11/09/2025', conteudo: 'liberdade canta?', numeroCurtidas: 0, novoComentario: '', listaComentarios: [] }
+      { titulo: 'Sem Anistia', autor: 'Carmen Lúcia', dataPublicacao: '11/09/2025',
+         conteudo: 'preso', numeroCurtidas: 0, novoComentario: '', listaComentarios: [] },
+      { titulo: 'Taokey', autor: 'Pocketnaro', dataPublicacao: '11/09/2025',
+         conteudo: 'preso', numeroCurtidas: 0, novoComentario: '', listaComentarios: [] },
+      { titulo: 'Vai Xandão', autor: 'Manoel Jones', dataPublicacao: '11/09/2025',
+         conteudo: 'liberdade canta?', numeroCurtidas: 0, novoComentario: '', listaComentarios: [] }
    ];   
 
    addCurtida(conteudo: any){

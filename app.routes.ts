@@ -21,7 +21,20 @@ import { Routes } from '@angular/router';
 // import { Exercicio5 } from './exercicio5/exercicio5';
 // import { Exercicio6 } from './exercicio6/exercicio6';
 // import { Exercicio7 } from './exercicio7/exercicio7';
-import { AC1 } from './ac1/ac1'
+import { AC1 } from './ac1/ac1';
+// import { ObjetosEInterfaces } from './objetos-e-interfaces/objetos-e-interfaces'
+// import { Carrinho } from './carrinho/carrinho';
+// import { ListaProdutos } from './lista-produtos/lista-produtos'
+// import { ContadorA } from './contador-a/contador-a'
+// import { ContadorB } from './contador-b/contador-b'
+// import { Alunos } from './alunos/alunos'
+// import { Produto } from './produto/produto';
+// import { ListarProduto } from './listar-produto/listar-produto';
+// import { Livros } from './livro/livro';
+// import { ListarLivro } from './listar-livro/listar-livro';
+import { CadastrarTarefa } from './cadastrar-tarefa/cadastrar-tarefa';
+import { ListarTarefa } from './listar-tarefa/listar-tarefa';
+
 
 
 
@@ -50,5 +63,18 @@ export const routes: Routes = [
    // {path: 'exercicio6', component: Exercicio6},
    // {path: 'exercicio7', component: Exercicio7}
 
-   {path: 'ac1', component: AC1}
+   {path: 'ac1', component: AC1},
+   // {path: 'objetos_e_interfaces', component: ObjetosEInterfaces}
+   // {path: 'carrinho', component: Carrinho}
+   // {path: 'lista_produtos', component: ListaProdutos},
+   // {path: 'contador_a', component: ContadorA},
+   // {path: 'contador_b', component: ContadorB}
+   // {path: 'alunos', component: Alunos}
+   // { path: 'produto', component: Produto },
+   // { path: 'listar', component: ListarProduto },
+   // { path: 'livro', component: Livros },
+   // { path: 'listar-livro', component: ListarLivro },
+   {path: 'cadastrar_tarefa', component: CadastrarTarefa},
+   {path: 'listar_tarefa', component: ListarTarefa}
+   
 ];

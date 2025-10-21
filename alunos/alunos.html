@@ -1,0 +1,6 @@
+<h3>Alunos</h3>
+<ul>
+   @for (aluno of alunos; track $index) {
+      <li>Nome: {{ aluno.nome }} - Idade: {{ aluno.idade }}</li>
+   }
+</ul>

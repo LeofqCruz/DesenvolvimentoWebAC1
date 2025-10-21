@@ -1,37 +1,25 @@
-
-
-
 <div class="container">
-   <div  *ngFor="let conteudo of conteudos">
-      <i>{{ conteudo.titulo }}</i>
-      <p><strong>Autor:</strong> {{ conteudo.autor }}</p>
-      <p><strong>Data:</strong> {{ conteudo.dataPublicacao }}</p>
-      <p>{{ conteudo.conteudo }}</p>
+   <div >
+   @for (conteudo of conteudos; track $index)
+   {
 
-      <button (click)="addCurtida(conteudo)">Curtir</button>
-      <span class="badge">Curtidas: {{ conteudo.numeroCurtidas }}</span>
-
-      <div class="comentario-section">
-         <input [(ngModel)]="conteudo.novoComentario"
+         <i class="titulo">{{ conteudo.titulo }}</i>
+         <p><strong>Autor:</strong> {{ conteudo.autor }}</p>
+         <p><strong>Data:</strong> {{ conteudo.dataPublicacao }}</p>
+         <p>{{ conteudo.conteudo }}</p>
+         
+         <button (click)="addCurtida(conteudo)">Curtir</button>
+         <span class="badge">Curtidas: {{ conteudo.numeroCurtidas }}</span>
+         
+         <div class="comentario-section">
+            <input [(ngModel)]="conteudo.novoComentario"
             placeholder="Escreva um comentário..." />
-         <button (click)="comentar(conteudo)">Comentar</button>
-      </div>
-
-      <ul>
-         <li *ngFor="let comentario of conteudo.listaComentarios">{{ comentario }}</li>
-      </ul>
+            <button (click)="comentar(conteudo)">Comentar</button>
+         </div>
+         
+         <ul>
+            <li *ngFor="let comentario of conteudo.listaComentarios">{{ comentario }}</li>
+         </ul>
+      }
    </div>
-</div>
-
-<!-- 
-<ul>
-   @for (c of conteudos; track $index) {
-   <li>
-      {{ c.titulo }} - {{ c.autor }} - {{ c.dataPublicacao }} - {{ c.conteudo }}
-      - {{ numeroCurtidas }} - {{ listaComentarios }}
-
-      <button (click)="curtido = !curtido">Curtir</button>
-      <input [ngModel]="comentario">
-   </li>
-   }
-</ul> -->
+   </div>

@@ -1,0 +1,9 @@
+<h2>Lista de Livros</h2>
+<ul>
+   @for (livro of livros; track livro.nome) {
+   <li>
+      Nome: {{ livro.nome }} - Gênero: {{ livro.genero }} - Número de Páginas:{{ livro.numeroPaginas }}
+      <button (click)="remover(livros.indexOf(livro))">Remover</button>
+   </li>
+   }
+</ul>

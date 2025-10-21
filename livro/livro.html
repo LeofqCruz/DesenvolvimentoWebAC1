@@ -1,0 +1,18 @@
+<h2>Cadastrar Livro</h2>
+<form (ngSubmit)="salvar()">
+   <label>Nome:</label>
+   <input [(ngModel)]="livro.nome" name="nome" required />
+
+   <label>Gênero:</label>
+   <input [(ngModel)]="livro.genero" name="genero" required />
+
+   <label>Número de Páginas:</label>
+   <input [(ngModel)]="livro.numeroPaginas" name="numeroPaginas" type="number" required />
+
+   <button type="submit">Salvar</button>
+</form>
+
+@if (livro.nome !== '' && livro.genero !== '' && livro.numeroPaginas > 0) {
+<p>Livro pronto para ser salvo: {{ livro.nome }} - {{ livro.genero }} - R$
+   {{ livro.numeroPaginas }}</p>
+}

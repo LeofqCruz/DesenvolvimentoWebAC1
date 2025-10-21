@@ -1,0 +1,18 @@
+<h2>Cadastrar Tarefa</h2>
+<form (ngSubmit)="adicionar()">
+   <label>Nome:</label>
+   <input [(ngModel)]="tarefa.nome" name="nome" required />
+
+   <label>Descrição:</label>
+   <input [(ngModel)]="tarefa.descricao" name="descricao" required />
+   <br>
+   <br>
+   <button type="submit">Cadastrar</button>
+</form>
+
+@if (tarefa.nome !== '' && tarefa.descricao !== '') {
+<p>Tarefa cadastrada: {{ tarefa.nome }} - {{ tarefa.descricao }}</p>
+}
+
+<br>
+<a routerLink="/lista" routerLinkActive="active">Lista de Tarefas</a>
